@@ -1,0 +1,39 @@
+.nav-container {
+  background-color: rgba(255, 228, 196, 0.555);
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  text-align: center;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  gap: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(27, 21, 88);
+  font-weight: 500;
+}
+
+a:hover {
+  color: rgb(35, 76, 190);
+}
+
+.nav-list-item {
+  transition: transform 0.2s;
+}
+.nav-list-item:hover {
+  transform: scale(1.1);
+  font-weight: 600;
+}

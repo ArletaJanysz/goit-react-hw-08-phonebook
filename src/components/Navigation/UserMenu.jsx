@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const UserMenu = ({ userEmail, onLogout }) => {
   return (
@@ -7,6 +8,11 @@ const UserMenu = ({ userEmail, onLogout }) => {
       <button onClick={onLogout}>Logout</button>
     </div>
   );
+};
+
+UserMenu.propTypes = {
+  userEmail: PropTypes.string.isRequired,
+  onLogout: PropTypes.func.isRequired,
 };
 
 export default UserMenu;
