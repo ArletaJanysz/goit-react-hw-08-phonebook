@@ -9,6 +9,12 @@ import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 
+import { Route, Switch } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
+import Register from '../Navigation/Register';
+import Login from '../Navigation/Login';
+import Contacts from '../Navigation/Contacts';
+
 import '../App/App.css';
 
 export function App() {
