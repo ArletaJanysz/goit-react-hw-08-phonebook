@@ -9,7 +9,7 @@ import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import Register from '../Navigation/Register';
 import Login from '../Navigation/Login';
@@ -36,6 +36,13 @@ export function App() {
 
   return (
     <div className="container">
+      <Navigation />
+      <Routes>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+
       <div className="phonebook-wrapper">
         <h1 className="phonebook-title">Phonebook</h1>
         <h6 className="phonebook-subtitle">by Arleta Janysz</h6>

@@ -1,5 +1,5 @@
 import React from 'react';
-import UserMenu from '../UserMenu/UserMenu';
+import UserMenu from '../Navigation/UserMenu';
 
 const Contacts = () => {
   const userEmail = 'mango@mail.com';
