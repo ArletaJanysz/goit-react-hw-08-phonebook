@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 import '../Navigation/Navigation.css';
 
 const Navigation = () => {
@@ -16,6 +15,9 @@ const Navigation = () => {
         </li>
         <li className="nav-list-item">
           <Link to="/contacts">Contacts</Link>
+        </li>
+        <li className="nav-list-item">
+          <Link to="/">Home</Link>
         </li>
       </ul>
     </nav>

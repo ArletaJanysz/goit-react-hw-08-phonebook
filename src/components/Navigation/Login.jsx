@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './Login.css';
+
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -24,10 +26,11 @@ const Login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <label className="login-label">
           Email:
           <input
+            className="login-input"
             type="email"
             name="email"
             value={formData.email}
@@ -35,9 +38,10 @@ const Login = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="login-label">
           Password:
           <input
+            className="login-input"
             type="password"
             name="password"
             value={formData.password}
@@ -45,7 +49,11 @@ const Login = () => {
           />
         </label>
         <br />
-        <button type="submit">Login</button>
+        <div className="login-btn-container">
+          <button className="login-btn" type="submit">
+            Login
+          </button>
+        </div>
       </form>
     </div>
   );

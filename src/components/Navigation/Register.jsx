@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './Register.css';
+
 const Register = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -26,10 +28,11 @@ const Register = () => {
   return (
     <div>
       <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form className="register-form" onSubmit={handleSubmit}>
+        <label className="register-label">
           First Name:
           <input
+            className="register-input"
             type="text"
             name="firstName"
             value={formData.firstName}
@@ -37,9 +40,10 @@ const Register = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="register-label">
           Last Name:
           <input
+            className="register-input"
             type="text"
             name="lastName"
             value={formData.lastName}
@@ -47,9 +51,10 @@ const Register = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="register-label">
           Phone Number:
           <input
+            className="register-input"
             type="tel"
             name="phoneNumber"
             value={formData.phoneNumber}
@@ -57,9 +62,10 @@ const Register = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="register-label">
           Email:
           <input
+            className="register-input"
             type="email"
             name="email"
             value={formData.email}
@@ -67,7 +73,11 @@ const Register = () => {
           />
         </label>
         <br />
-        <button type="submit">Register</button>
+        <div className="register-btn-container">
+          <button className="register-btn" type="submit">
+            Register
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addContactAsync } from 'redux/actions';
-import PropTypes from 'prop-types';
 
-import '../ContactForm/ContactForm.css';
-
-const ContactForm = () => {
+const AddContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.contacts);
-
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -24,12 +19,16 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (contacts.some(contact => contact.name === name)) {
-      alert(`${name} is already in contacts.`);
+    // Sprawdź, czy name i number nie są puste
+    if (!name.trim() || !number.trim()) {
+      alert('Name and number are required fields.');
       return;
     }
 
+    // Wywołaj akcję dodawania kontaktu
     dispatch(addContactAsync({ name, number }));
+
+    // Zresetuj formularz
     setName('');
     setNumber('');
   };
@@ -61,15 +60,4 @@ const ContactForm = () => {
   );
 };
 
-ContactForm.propTypes = {
-  onAddContact: PropTypes.func.isRequired,
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
-
-export default ContactForm;
+export default AddContactForm;

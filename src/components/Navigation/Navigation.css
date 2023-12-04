@@ -1,14 +1,10 @@
 .nav-container {
-  background-color: rgba(255, 228, 196, 0.555);
-  padding: 10px 20px;
-  border: 1px solid black;
-  border-radius: 20px;
+  margin-top: 40px;
+  padding: 5px 20px;
   display: flex;
   text-align: center;
-  position: fixed;
-  right: 10px;
-  top: 10px;
   margin-bottom: 20px;
+  border-top: 2px solid rgb(54, 54, 54);
 }
 
 .nav-list {
@@ -22,7 +18,7 @@
 
 a {
   text-decoration: none;
-  color: rgb(27, 21, 88);
+  color: rgb(187, 187, 187);
   font-weight: 500;
 }
 

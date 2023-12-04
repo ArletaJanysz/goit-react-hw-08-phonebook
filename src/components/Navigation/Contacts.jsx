@@ -1,18 +1,19 @@
 import React from 'react';
-import UserMenu from '../Navigation/UserMenu';
+import ContactList from '../ContactList/ContactList';
+import AddContactForm from '../ContactForm/ContactForm';
+
 
 const Contacts = () => {
-  const userEmail = 'mango@mail.com';
-
-  const handleLogout = () => {
-    console.log('Logout clicked');
-  };
+  // Pobierz kontakty z Redux lub innego miejsca w zależności od potrzeb
+  const contacts = [];
 
   return (
     <div>
       <h1>Contacts</h1>
-      <UserMenu userEmail={userEmail} onLogout={handleLogout} />
-      {}
+      {/* Wyświetl zapisane kontakty */}
+      <ContactList contacts={contacts} />
+      {/* Dodaj formularz do dodawania nowych kontaktów */}
+      <AddContactForm />
     </div>
   );
 };
